@@ -7,4 +7,4 @@ ______________________
 
 --> Finally type ./a.out to run the files.
 
-*If you receive linked error, you didn't execute the g++ compiling command with cpp/h files correctly.
+*If you receive linker error, you didn't execute the g++ compiling command with cpp/h files correctly*
