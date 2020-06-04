@@ -1,0 +1,56 @@
+
+Testing constructor and company insert!
+
+Testing inserting 2 items
+
+Print all items for company1
+Printing the products of Google:
+- Pixel, where the price is $200
+- Pixel 2, where the price is $300
+
+
+Basic erase items test
+
+Insert to recently empty list test
+
+Print all items after erase and reinsert
+Printing the products of Google:
+- Pixel 3, where the price is $400
+
+
+----------------------------
+
+Testing operator= for database2 and print
+Printing the products of Google:
+- Pixel 3, where the price is $400
+
+
+Testing insert into DB2
+
+Print both databases (should be different)
+DB1
+Printing the products of Google:
+- Pixel 3, where the price is $400
+
+-----
+
+DB2
+Printing the products of Google:
+- Pixel 3, where the price is $400
+- Pixel 4, where the price is $10000
+
+
+----------------------------
+
+Testing copy constructor from DB2 to DB3
+DB3
+Printing the products of Google:
+- Pixel 3, where the price is $400
+- Pixel 4, where the price is $10000
+
+
+ erase company from database3 and print
+
+Database destructor test
+
+
