@@ -1,0 +1,6 @@
+Packet packet;
+printf("Sending packet \n");
+packet.header.seq_ack = seqnum;
+packet.header.len = strlen(packet.data);
+packet.header.cksum - getChecksum(packet);
+// send the data
