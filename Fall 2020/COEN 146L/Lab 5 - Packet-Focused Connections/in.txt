@@ -1,0 +1,3 @@
+address.sin_family = AF_INET;
+address.sin_port = htons(atoi(argv[2]));
+address.sin_addr = *((struct in_addr *)host->h_addr);
