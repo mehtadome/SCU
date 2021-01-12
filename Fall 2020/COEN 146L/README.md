@@ -1,6 +1,6 @@
-COEN 146 - Computer Networks <br/>
+COEN 146 - Computer Networks: Sofware development of network protocols and applications. <br/>
 Professor: Salem Al-Agtash (Phd Electrical Engineering) <br/>
-Sofware Development of network protocols and applications <br/>
+<br/>
 <br/>
 
 
