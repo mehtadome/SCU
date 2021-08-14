@@ -1,33 +1,51 @@
-module register_file(read_addr_1, read_addr_2, write_adder,
-write_data, reg_write, CLK, read_data_1, read_data_2);
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/29/2021 03:37:29 PM
+// Design Name: 
+// Module Name: register_file
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
-    input [5:0] read_addr_1;
-    input [5:0] read_addr_2;
-    input [5:0] write_adder;
-    input [31:0] write_data;
+// test by write flag to one
+// set register destination to different input data
+// read from the registers outputted to after writing
 
-    input reg_write;
-    input CLK;
-    output reg [31:0] read_data_1, read_data_2;
+module register_file(clk, writer, input_data, reg_source, reg_target, reg_destination, write_source_out, write_target_out);
+//initialization of variables
+input clk;
+input writer;
 
-    integer i;
-    reg [31:0] registers [63:0];
+//register source, register target, and register destination
+input[5:0] reg_source;
+input[5:0] reg_target;
+input[5:0] reg_destination;
 
-    initial 
-        begin
-        for (i = 0; i < 64; i = i + 1) begin 
-            registers[i] = i;
-        end 
-    end
+input [31:0] input_data;
 
-    always@(posedge CLK)
-    begin 
-        read_data_1 = registers[read_addr_1];
-        read_data_2 = registers[read_addr_2];
+reg[31:0] registers[63:0];
 
-        if (reg_write == 1)
-            registers[write_addr] = write_data;
-    end 
+output reg [31:0] write_source_out;
+output reg [31:0] write_target_out;
 
+always@(posedge clk)
+begin
+    if (writer == 1) //
+        registers[reg_destination] = input_data;
+        
+    write_source_out = registers[reg_source];
+    write_target_out = registers[reg_target];
+end
 endmodule
-
